@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyJob — As Mulheres Mais Gostosas Querem Te Conhecer Agora</title>
+    <meta name="description" content="Milhares de Sugar Babies verificadas. Acesso direto ao WhatsApp. Sem enrolação, sem falsidade.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* POPUP VERIFICAÇÃO DE IDADE */
+        #ageVerification {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.98);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(20px);
+        }
+
+        .age-box {
+            background: linear-gradient(135deg, #1a0000, #000);
+            border: 3px solid #ff0055;
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+            max-width: 500px;
+            box-shadow: 0 20px 80px rgba(255,0,85,0.5);
+        }
+
+        .age-box h2 {
+            font-size: 2.5rem;
+            color: #ff0055;
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+
+        .age-box p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #ccc;
+        }
+
+        .age-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .age-btn {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: 900;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+
+        .age-yes {
+            background: linear-gradient(135deg, #ff0055, #cc0044);
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(255,0,85,0.4);
+        }
+
+        .age-yes:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(255,0,85,0.6);
+        }
+
+        .age-no {
+            background: #333;
+            color: #fff;
+        }
+
+        .age-no:hover {
+            background: #555;
+        }
+
+        /* BARRA DE URGÊNCIA FIXA */
+        .urgency-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #ff0055, #cc0044);
+            padding: 12px 20px;
+            text-align: center;
+            font-weight: 800;
+            font-size: 1rem;
+            z-index: 1000;
+            box-shadow: 0 3px 15px rgba(255,0,85,0.5);
+            animation: urgencyPulse 2s infinite;
+        }
+
+        @keyframes urgencyPulse {
+            0%, 100% { background: linear-gradient(135deg, #ff0055, #cc0044); }
+            50% { background: linear-gradient(135deg, #cc0044, #ff0055); }
+        }
+
+        .urgency-bar span {
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .spots-left {
+            display: inline-block;
+            background: #000;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin: 0 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.2rem;
+            color: #ff0055;
+            font-weight: 900;
+            animation: spotBlink 1s infinite;
+        }
+
+        @keyframes spotBlink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        /* LOGO */
+        .logo-container {
+            text-align: center;
+            padding: 80px 20px 30px;
+            background: #000;
+        }
+
+        .logo-container img {
+            height: 60px;
+            width: auto;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=1600&q=90') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(255,0,85,0.2), transparent 70%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            font-weight: 900;
+            margin-bottom: 25px;
+            color: #ff0055;
+            text-shadow: 0 0 50px rgba(255,0,85,0.8), 0 0 100px rgba(255,0,85,0.4);
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: clamp(1.3rem, 3vw, 2rem);
+            margin-bottom: 40px;
+            color: #fff;
+            font-weight: 600;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+        }
+
+        .cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff0055 0%, #cc0044 100%);
+            color: #fff;
+            padding: 25px 80px;
+            font-size: 1.5rem;
+            font-weight: 900;
+            text-decoration: none;
+            border-radius: 50px;
+            text-transform: uppercase;
+            box-shadow: 0 15px 50px rgba(255,0,85,0.6);
+            transition: all 0.3s;
+            letter-spacing: 1px;
+            border: 3px solid #ff0055;
+            animation: ctaBounce 2s infinite;
+        }
+
+        @keyframes ctaBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .cta:hover {
+            transform: scale(1.1) translateY(-5px) !important;
+            box-shadow: 0 25px 70px rgba(255,0,85,0.8);
+            background: #ff0055;
+        }
+
+        .cta-subtext {
+            display: block;
+            margin-top: 15px;
+            font-size: 1.1rem;
+            color: #ffcc00;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(255,204,0,0.5);
+        }
+
+        /* VÍDEO */
+        .video-section {
+            padding: 100px 20px;
+            background: #0a0a0a;
+            text-align: center;
+        }
+
+        .video-section h2 {
+            font-size: clamp(2rem, 5vw, 4rem);
+            color: #ff0055;
+            margin-bottom: 50px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .video-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 80px rgba(255,0,85,0.4);
+            border: 3px solid #ff0055;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            display: block;
+        }
+
+        /* GALERIA DE FOTOS SENSUAIS */
+        .gallery {
+            padding: 100px 20px;
+            background: #000;
+        }
+
+        .gallery h2 {
+            font-size: clamp(2rem, 5vw, 4rem);
+            text-align: center;
+            color: #ff0055;
+            margin-bottom: 60px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .photos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .photo-card {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+            transition: all 0.4s;
+            border: 2px solid #222;
+            cursor: pointer;
+        }
+
+        .photo-card:hover {
+            transform: scale(1.05) rotate(1deg);
+            border-color: #ff0055;
+            box-shadow: 0 20px 60px rgba(255,0,85,0.6);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .photo-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            padding: 30px 20px;
+            transform: translateY(100%);
+            transition: all 0.4s;
+        }
+
+        .photo-card:hover .photo-overlay {
+            transform: translateY(0);
+        }
+
+        .photo-overlay h3 {
+            font-size: 1.5rem;
+            color: #ff0055;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .photo-overlay p {
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        /* MANUAL DO HOMEM MODERNO */
+        section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            text-align: center;
+            margin-bottom: 50px;
+            color: #ff0055;
+            font-weight: 900;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            color: #ff3377;
+            margin: 40px 0 20px;
+            font-weight: 800;
+        }
+
+        p, li {
+            font-size: 1.25rem;
+            line-height: 1.9;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        strong {
+            color: #ff0055;
+            font-weight: 800;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #1a0000, #0d0000);
+            border: 4px solid #ff0055;
+            border-radius: 20px;
+            padding: 50px;
+            margin: 60px 0;
+            box-shadow: 0 20px 60px rgba(255,0,85,0.3);
+        }
+
+        ul {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        ul li {
+            padding: 15px 0;
+            padding-left: 50px;
+            position: relative;
+            font-size: 1.25rem;
+        }
+
+        ul li:before {
+            content: "🔥";
+            position: absolute;
+            left: 0;
+            font-size: 1.8rem;
+        }
+
+        /* TABELA COMPARATIVA */
+        table {
+            width: 100%;
+            margin: 60px 0;
+            border-collapse: collapse;
+            background: #111;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.7);
+        }
+
+        th {
+            background: #ff0055;
+            padding: 30px;
+            font-size: 1.4rem;
+            text-align: left;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 25px 30px;
+            border-bottom: 1px solid #222;
+            font-size: 1.2rem;
+        }
+
+        tr:hover {
+            background: #1a1a1a;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .check { color: #4CAF50; font-weight: 900; font-size: 1.5rem; }
+        .cross { color: #f44336; font-weight: 900; font-size: 1.5rem; }
+
+        /* DEPOIMENTOS */
+        .testimonial {
+            background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+            padding: 50px;
+            border-left: 8px solid #ff0055;
+            margin: 50px 0;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        .testimonial blockquote {
+            font-size: 1.4rem;
+            font-style: italic;
+            margin-bottom: 25px;
+            color: #ddd;
+            line-height: 1.9;
+        }
+
+        .testimonial cite {
+            display: block;
+            text-align: right;
+            color: #ff0055;
+            font-weight: 900;
+            font-size: 1.3rem;
+        }
+
+        .dark-section {
+            background: #0a0a0a;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* SEÇÃO FINAL CTA */
+        .final-cta {
+            background: linear-gradient(135deg, #1a0000, #000);
+            padding: 100px 20px;
+            text-align: center;
+            border-top: 5px solid #ff0055;
+        }
+
+        .final-cta h2 {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            margin-bottom: 30px;
+        }
+
+        .final-cta p {
+            font-size: 1.5rem;
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .cta { padding: 20px 50px; font-size: 1.2rem; }
+            .photos-grid { grid-template-columns: 1fr; }
+            th, td { padding: 15px; font-size: 1rem; }
+            .age-box { padding: 30px; }
+            .age-buttons { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- POPUP VERIFICAÇÃO DE IDADE -->
+    <div id="ageVerification">
+        <div class="age-box">
+            <h2>⚠️ ATENÇÃO</h2>
+            <p>Este site contém conteúdo adulto.<br>Você confirma que tem mais de 18 anos?</p>
+            <div class="age-buttons">
+                <button class="age-btn age-yes" onclick="enterSite()">SIM, TENHO +18</button>
+                <button class="age-btn age-no" onclick="exitSite()">NÃO</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BARRA DE URGÊNCIA -->
+    <div class="urgency-bar">
+        <span>⚡ VAGAS LIMITADAS: Apenas <span class="spots-left" id="spotsLeft">47</span> cadastros disponíveis hoje! ⚡</span>
+    </div>
+
+    <!-- LOGO -->
+    <div class="logo-container">
+        <img src="https://onlyjob.com.br/assets/img/logo-branco.png" alt="OnlyJob Logo">
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>As Gostosas Mais Taradas do Brasil Querem Te Conhecer</h1>
+            <p>Milhares de <strong>Sugar Babies verificadas</strong> na sua cidade. Acesso direto ao WhatsApp. Sem frescura, sem mentira, sem perda de tempo.</p>
+            <a href="https://onlyjob.com.br/sistema/cadastro?utm_source=google&utm_medium=cpc&utm_campaign=onlyjob_google&utm_content=onlyjob_google" class="cta">
+                QUERO CONHECER AS GOSTOSAS AGORA
+                <span class="cta-subtext">✅ Vagas Limitadas • Cadastro Grátis</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- VÍDEO EXPLICATIVO -->
+    <section class="video-section">
+        <h2>🔥 Veja Como Funciona (E Por Que Você Vai Pirar)</h2>
+        <div class="video-wrapper">
+            <video controls poster="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&q=90">
+                <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+            </video>
+        </div>
+        <p style="margin-top: 30px; font-size: 1.3rem; color: #ccc; text-align: center;">
+            <strong style="color: #ff0055;">Atenção:</strong> Este vídeo contém linguagem explícita e é destinado apenas para maiores de 18 anos.
+        </p>
+    </section>
+
+    <!-- GALERIA DE FOTOS SENSUAIS -->
+    <section class="gallery">
+        <h2>🔥 Conheça Algumas Das Nossas Sugar Babies</h2>
+        <div class="photos-grid">
+            <div class="photo-card">
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&q=90" alt="Sugar Baby 1">
+                <div class="photo-overlay">
+                    <h3>Bianca, 24 anos</h3>
+                    <p>São Paulo • Adora jantares e... muito mais 😈</p>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&q=90" alt="Sugar Baby 2">
+                <div class="photo-overlay">
+                    <h3>Amanda, 22 anos</h3>
+                    <p>Rio de Janeiro • Sem frescura, curte aventuras</p>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&q=90" alt="Sugar Baby 3">
+                <div class="photo-overlay">
+                    <h3>Juliana, 26 anos</h3>
+                    <p>Belo Horizonte • Loira tarada, adora diversão</p>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&q=90" alt="Sugar Baby 4">
+                <div class="photo-overlay">
+                    <h3>Larissa, 23 anos</h3>
+                    <p>Curitiba • Morena safada, mente aberta</p>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=90" alt="Sugar Baby 5">
+                <div class="photo-overlay">
+                    <h3>Camila, 25 anos</h3>
+                    <p>Porto Alegre • Gosta de homens decididos</p>
+                </div>
+            </div>
+            <div class="photo-card">
+                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600&q=90" alt="Sugar Baby 6">
+                <div class="photo-overlay">
+                    <h3>Fernanda, 27 anos</h3>
+                    <p>Brasília • Experiência e tesão de sobra</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center" style="margin-top: 60px;">
+            <a href="https://onlyjob.com.br/sistema/cadastro?utm_source=google&utm_medium=cpc&utm_campaign=onlyjob_google&utm_content=onlyjob_google" class="cta">VER TODAS AS GOSTOSAS DISPONÍVEIS</a>
+        </div>
+    </section>
+
+    <!-- MANUAL DO HOMEM MODERNO -->
+    <section class="dark-section">
+        <h2>📖 Manual do Homem Moderno: Como Conhecer Sugar Babies de Verdade</h2>
+        
+        <div class="highlight-box">
+            <h3>🔥 A Verdade Que Ninguém Te Conta</h3>
+            <p>Esqueça tudo que você leu na internet sobre "relacionamento sugar". A maioria dos sites mente descaradamente. Te vendem a fantasia de que você vai "bancar" uma mulher linda sem receber nada em troca. <strong>Mentira</strong>.</p>
+            <p>A realidade é outra: <strong>mulheres taradas existem, estão aí na rua, e muitas querem conhecer homens que não fazem drama</strong>. Não é sobre pagar mesada. É sobre conexão real, atração, diversão e, sim, sexo sem frescura.</p>
+        </div>
+
+        <h3>🎯 O Que É Relacionamento Sugar DE VERDADE?</h3>
+        <p>Relacionamento sugar é quando você conhece uma mulher incrível que não está procurando compromisso, mas sim <strong>diversão, companhia e experiências intensas</strong>. Ela não quer que você pague as contas dela. Ela quer:</p>
+        <ul>
+            <li><strong>Ser tratada como rainha</strong> quando estão juntos</li>
+            <li><strong>Transar sem culpa</strong>, sem cobranças emocionais</li>
+            <li><strong>Curtir bons momentos</strong>: jantares, viagens, hotéis, festas</li>
+            <li><strong>Ter um homem que sabe o que quer</strong> e não fica fazendo joguinho</li>
+        </ul>
+
+        <h3>💰 E Sobre Pagar Mesada?</h3>
+        <p><strong>Vamos ser sinceros:</strong> brasileiro não banca baby. Isso é coisa de gringo. Aqui no Brasil, o esquema é outro. As mulheres que estão na OnlyJob são <strong>mulheres reais</strong>, que trabalham, estudam, têm vida própria, mas adoram conhecer homens interessantes e ter experiências que elas não conseguiriam sozinhas.</p>
+        <p>Você vai pagar o jantar? Sim. Vai bancar o Uber dela? Provavelmente. Vai pagar o motel? Claro. Mas isso não é "mesada" — é o <strong>mínimo que qualquer homem de verdade faz quando sai com uma mulher</strong>.</p>
+
+        <h3>🔞 E Sobre Sexo?</h3>
+        <p>Vamos parar de hipocrisia. <strong>É claro que vai rolar sexo</strong>. Mas não é uma transação comercial. É atração, tesão, química. As Sugar Babies da OnlyJob são mulheres que:</p>
+        <ul>
+            <li>Adoram <strong>sexo sem frescura</strong></li>
+            <li>Não fazem drama com <strong>sexo sem camisinha</strong> (se tiverem confiança)</li>
+            <li>Curtem <strong>boquete, anal, menage</strong> e tudo que você sempre quis experimentar</li>
+            <li>Querem <strong>um homem que saiba o que está fazendo</strong></li>
+        </ul>
+        <p>A diferença da OnlyJob para os outros sites? <strong>Aqui você tem acesso direto ao WhatsApp delas</strong>. Sem intermediários, sem taxas escondidas, sem enrolação.</p>
+
+        <h3>🚀 Como Funciona o Processo na OnlyJob?</h3>
+        <p><strong>1. Você se cadastra gratuitamente</strong> (leva 2 minutos)</p>
+        <p><strong>2. Navega pelos perfis</strong> de milhares de Sugar Babies verificadas na sua cidade</p>
+        <p><strong>3. Escolhe as que você mais curtiu</strong> e envia mensagem direto pelo WhatsApp</p>
+        <p><strong>4. Marca um encontro</strong> (jantar, drinks, motel, o que vocês combinarem)</p>
+        <p><strong>5. Curte o melhor sexo da sua vida</strong> sem drama, sem mentira, sem falsidade</p>
+
+        <h3>👑 Por Que a OnlyJob É Diferente?</h3>
+        <ul>
+            <li><strong>Perfis 100% verificados</strong>: todas as mulheres passam por verificação rigorosa</li>
+            <li><strong>Acesso direto ao WhatsApp</strong>: sem mediadores, sem taxas absurdas</li>
+            <li><strong>Mulheres de verdade</strong>: nada de perfis falsos ou robôs</li>
+            <li><strong>Discrição total</strong>: seus dados nunca são expostos</li>
+            <li><strong>Comunidade ativa</strong>: milhares de homens e mulheres usando diariamente</li>
+        </ul>
+    </section>
+
+    <!-- TABELA COMPARATIVA -->
+    <section>
+        <h2>⚔️ OnlyJob vs. Outros Sites de Relacionamento Sugar</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Característica</th>
+                    <th>OnlyJob</th>
+                    <th>Meu Patrocínio</th>
+                    <th>Tinder / Apps Comuns</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Perfis Verificados</strong></td>
+                    <td class="check">✅ Sim</td>
+                    <td class="cross">❌ Não</td>
+                    <td class="cross">❌ Não</td>
+                </tr>
+                <tr>
+                    <td><strong>Acesso Direto ao WhatsApp</strong></td>
+                    <td class="check">✅ Sim</td>
+                    <td class="cross">❌ Não</td>
+                    <td class="cross">❌ Não</td>
+                </tr>
+                <tr>
+                    <td><strong>Sem Taxas Absurdas</strong></td>
+                    <td class="check">✅ Grátis para cadastro</td>
+                    <td class="cross">❌ Cobram fortunas</td>
+                    <td class="cross">❌ Assinatura cara</td>
+                </tr>
+                <tr>
+                    <td><strong>Mulheres Querem Sexo</strong></td>
+                    <td class="check">✅ Sim, sem frescura</td>
+                    <td class="cross">❌ Maioria quer só dinheiro</td>
+                    <td class="cross">❌ Maioria quer "amizade"</td>
+                </tr>
+                <tr>
+                    <td><strong>Sexo Sem Camisinha</strong></td>
+                    <td class="check">✅ Mulheres abertas ao diálogo</td>
+                    <td class="cross">❌ Raramente</td>
+                    <td class="cross">❌ Quase nunca</td>
+                </tr>
+                <tr>
+                    <td><strong>Boquete, Anal, Menage</strong></td>
+                    <td class="check">✅ Mulheres sem tabus</td>
+                    <td class="cross">❌ Depende (maioria cobra extra)</td>
+                    <td class="cross">❌ Difícil de conseguir</td>
+                </tr>
+                <tr>
+                    <td><strong>Discrição Total</strong></td>
+                    <td class="check">✅ 100% sigiloso</td>
+                    <td class="cross">❌ Vazam dados</td>
+                    <td class="cross">❌ Todo mundo vê seu perfil</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-center" style="margin-top: 60px;">
+            <a href="https://onlyjob.com.br/sistema/cadastro?utm_source=google&utm_medium=cpc&utm_campaign=onlyjob_google&utm_content=onlyjob_google" class="cta">QUERO ENTRAR NA ONLYJOB AGORA</a>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="dark-section">
+        <h2>🗣️ O Que Os Homens Estão Falando</h2>
+        
+        <div class="testimonial">
+            <blockquote>
+                "Cara, eu achei que era mais uma mentira da internet. Mas puta merda, em 3 dias já tinha saído com 2 gostosas. A segunda topou ir pro motel na primeira vez. Valeu cada centavo do jantar. Melhor investimento da minha vida."
+            </blockquote>
+            <cite>— Rodrigo, 34 anos, São Paulo</cite>
+        </div>
+
+        <div class="testimonial">
+            <blockquote>
+                "Tô usando a OnlyJob faz 2 meses. Já conheci umas 5 minas. Todas gostosas, todas taradas, todas sem frescura. Não tem comparação com Tinder, brother. Aqui é outro nível."
+            </blockquote>
+            <cite>— Felipe, 28 anos, Rio de Janeiro</cite>
+        </div>
+
+        <div class="testimonial">
+            <blockquote>
+                "Eu tava cansado de app de namoro onde a mina só quer atenção. Aqui é direto: você chama, ela responde, vocês marcam e pronto. Sem joguinho. E o melhor: elas QUEREM transar. Não precisa ficar implorando."
+            </blockquote>
+            <cite>— Marcelo, 41 anos, Belo Horizonte</cite>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="final-cta">
+        <h2>🚀 Pronto Para Conhecer As Gostosas Mais Taradas do Brasil?</h2>
+        <p>Vagas limitadas. Cadastros abertos apenas para <strong><span id="finalSpots">47</span> homens hoje</strong>.</p>
+        <a href="https://onlyjob.com.br/sistema/cadastro?utm_source=google&utm_medium=cpc&utm_campaign=onlyjob_google&utm_content=onlyjob_google" class="cta">
+            GARANTIR MINHA VAGA AGORA
+            <span class="cta-subtext">✅ Cadastro Grátis • Acesso Imediato</span>
+        </a>
+        <p style="margin-top: 40px; font-size: 1.1rem; color: #ffcc00;">
+            ⚡ <strong>ATENÇÃO:</strong> Assim que as vagas se esgotarem, o cadastro será fechado por tempo indeterminado.
+        </p>
+    </section>
+
+    <script>
+        // POPUP DE IDADE
+        function enterSite() {
+            document.getElementById('ageVerification').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function exitSite() {
+            window.location.href = 'https://www.google.com';
+        }
+
+        // CONTADOR DE VAGAS (SIMULADO)
+        let spots = 47;
+        setInterval(() => {
+            if (spots > 12) {
+                spots -= Math.floor(Math.random() * 3) + 1;
+                document.getElementById('spotsLeft').textContent = spots;
+                document.getElementById('finalSpots').textContent = spots;
+            }
+        }, 8000);
+    </script>
+
+</body>
+</html>
